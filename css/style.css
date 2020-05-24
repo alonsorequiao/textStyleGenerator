@@ -6,7 +6,7 @@ body {
     font-family: "Helvetica Neue";
 }
 
-.masterDiv {
+.mainDiv {
     display: table;
     width: 900px;
     height: 500px;
@@ -21,13 +21,13 @@ body {
     border-radius: 10px;
 }
 
-.divDisplay, .choicesDisplay {
+.controller, .choicesDisplay {
     text-align: center;
     display: table-cell;
     vertical-align: middle;
 }
 
-.divDisplay {
+.controller {
     margin-right: 20px;
 }
 
@@ -37,8 +37,6 @@ body {
     background: #5e5e5e;
     border-radius: 10px;
 }
-
-
 
 .textDisplay {
     position: relative;
@@ -50,7 +48,7 @@ body {
     border-radius: 10px;
 }
 
-.controllerDisplay {
+.styleController {
     position: relative;
     padding: 20px;
     width: 460px;
@@ -59,6 +57,29 @@ body {
     text-align: center;
     background: #5e5e5e;
     border-radius: 10px;
+}
+
+.loadingDisplay {
+    margin: 20px auto;
+    width: 500px;
+    border: 1px solid white;
+    position: relative;
+    padding: 3px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#barLoading {
+    display: none;
+    height: 20px;
+    border-radius: 3px;
+}
+
+#percentageDisplay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
 }
 
 .container {
@@ -71,7 +92,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.myh1 {
+.textStyle {
     position: relative;
     text-align: center;
     top: 50%;
@@ -80,10 +101,12 @@ body {
     padding: 0px;
     margin: 0px;
     color: #ffffff;
-    font-size: 20px;
 }
 
-
+#text2, #text3 {
+    font-size: 14px;
+    color: #ffffff;
+}
 
 .colorButton {
     position: relative;
@@ -108,14 +131,20 @@ body {
     width: 226px;
 }
 
-.myButton3 {
+.saveButton {
     position: relative;
     margin-top: 20px;
+    height: 30px !important;
+    width: 226px;
+}
+
+.resetButton {
+    position: relative;
     height: 30px;
     width: 226px;
 }
 
-.newTable {
+.tableContent {
     height: 90%;
     width: 100%;
     display: table;
@@ -130,4 +159,48 @@ h2 {
 
 #choiceContainer {
     display: table-row;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover {
+    text-decoration: underline;
+}
+
+.tooltip .tooltiptext {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+
+    width: 180px;
+    background-color: rgba(54, 54, 54, 0.45);
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.deleteButton {
+    color: #ff4800;
+    font-size: 16px;
+    padding: 0px;
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.deleteButton:hover {
+    color: #e77e7e;
 }

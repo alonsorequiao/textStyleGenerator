@@ -7,43 +7,60 @@
 </head>
 <body>
 
-<div class="masterDiv">
+<div class="mainDiv">
 
-    <div class="divDisplay">
+    <div class="controller">
 
-        <!--    Display------------------------------>
+<!--        Display-->
         <div class="textDisplay">
             <div class="container">
-                <p class="myh1" >
-                    <span id="myh1">HELLO WORLD!</span>
-                    </br>
-                    <span id="myh2">(Style)</span>
+                <p class="textStyle" >
+                    <span id="text1">HELLO WORLD!</span>
+                    <br>
+                    <span id="text2">20px</span>
+                    <br>
+                    <span id="text3">RGB(255, 255, 255)</span>
                 </p>
             </div>
         </div>
 
-        <!--    Controller--------------------------->
-        <div class="controllerDisplay">
+<!--        Controller-->
+        <div class="styleController">
             <button class="colorButton" type="button" onclick="changeColorh1()">CHANGE COLOR</button>
             <button class="fontButton" type="button" onclick="changeFontSizeh1()">CHANGE FONT SIZE</button>
             <br>
-            <input type="text" class="textInput" id="textBox" placeholder="Type anything between 0-9 characters">
+
+            <input type="text" class="textInput" id="textBox" placeholder="Type anything between 0-9 characters" maxlength="9" autocomplete="off">
             <br>
-            <button class="myButton3" type="button" onclick="saveSet()">SAVE STYLE</button>
+            <button class="saveButton" type="button" onclick="saveSet()">SAVE STYLE</button>
+
+        </div>
+
+<!--        Percentage-->
+        <div class="loadingDisplay">
+            <span id="percentageDisplay">0%</span>
+            <div id="barLoading"></div>
+        </div>
+
+<!--        RESET-->
+        <div>
+            <button type="button" class="resetButton" onclick="resetStyles()">RESET</button>
         </div>
 
     </div>
 
-    <!--SETTINGS SAVED------------------------------>
+<!--    SETTINGS SAVED-->
     <div class="choicesDisplay">
-        <div class="newTable">
+        <div class="tableContent">
             <h2>STYLES SAVED</h2>
             <div id="choiceContainer">
+                <div id="variableContainer"></div>
             </div>
         </div>
     </div>
 
 </div>
+
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>
